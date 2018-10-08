@@ -16,6 +16,7 @@ class CreateFlightsTable extends Migration
         Schema::create('flights', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('number');
+            $table->integer('airline_id');
             $table->float('price', 7, 2);
             $table->integer('flight_departure_id');
             $table->integer('flight_arrival_id');
@@ -35,6 +36,10 @@ class CreateFlightsTable extends Migration
         return $this->belongsTo('App\Airport');
     }
 
+    public function airline()
+    {
+        return $this->belongsTo('App\Airline');
+    }
 
 
     /**

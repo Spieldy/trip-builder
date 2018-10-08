@@ -21,6 +21,11 @@ class CreateAirlinesTable extends Migration
         });
     }
 
+    public function flights()
+    {
+        return $this->hasMany('App\Flight');
+    }
+
     /**
      * Reverse the migrations.
      *

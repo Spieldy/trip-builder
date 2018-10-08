@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $flights = App\Airline::all();
+
+    foreach ($flights as $flight) {
+        echo $flight->name;
+    }
+    return $flights;
 });

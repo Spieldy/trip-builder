@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Trip Builders
                 </div>
 
                 <div class="links">
